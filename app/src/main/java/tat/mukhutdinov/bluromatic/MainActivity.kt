@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19
+package tat.mukhutdinov.bluromatic
 
 import android.content.ContentResolver
 import android.content.Context
@@ -10,8 +10,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import tat.mukhutdinov.lesson19.ui.BluromaticScreen
-import tat.mukhutdinov.lesson19.ui.theme.BluromaticTheme
+import tat.mukhutdinov.bluromatic.ui.BluromaticScreen
+import tat.mukhutdinov.bluromatic.ui.theme.BluromaticTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

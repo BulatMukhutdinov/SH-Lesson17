@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.data
+package tat.mukhutdinov.bluromatic.data
 
 import android.content.Context
 

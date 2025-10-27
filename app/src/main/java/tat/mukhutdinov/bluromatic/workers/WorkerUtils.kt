@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.workers
+package tat.mukhutdinov.bluromatic.workers
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,13 +10,13 @@ import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import tat.mukhutdinov.lesson19.CHANNEL_ID
-import tat.mukhutdinov.lesson19.NOTIFICATION_ID
-import tat.mukhutdinov.lesson19.NOTIFICATION_TITLE
-import tat.mukhutdinov.lesson19.OUTPUT_PATH
-import tat.mukhutdinov.lesson19.R
-import tat.mukhutdinov.lesson19.VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION
-import tat.mukhutdinov.lesson19.VERBOSE_NOTIFICATION_CHANNEL_NAME
+import tat.mukhutdinov.bluromatic.CHANNEL_ID
+import tat.mukhutdinov.bluromatic.NOTIFICATION_ID
+import tat.mukhutdinov.bluromatic.NOTIFICATION_TITLE
+import tat.mukhutdinov.bluromatic.OUTPUT_PATH
+import tat.mukhutdinov.bluromatic.R
+import tat.mukhutdinov.bluromatic.VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION
+import tat.mukhutdinov.bluromatic.VERBOSE_NOTIFICATION_CHANNEL_NAME
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream

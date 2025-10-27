@@ -1,6 +1,6 @@
-package tat.mukhutdinov.lesson19.data
+package tat.mukhutdinov.bluromatic.data
 
-import tat.mukhutdinov.lesson19.R
+import tat.mukhutdinov.bluromatic.R
 
 object BlurAmountData {
     val blurAmount = listOf(

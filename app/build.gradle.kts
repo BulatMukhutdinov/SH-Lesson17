@@ -1,16 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = "tat.mukhutdinov.lesson19"
-    compileSdk = 34
+    namespace = "tat.mukhutdinov.bluromatic"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "tat.mukhutdinov.lesson19"
+        applicationId = "tat.mukhutdinov.bluromatic"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

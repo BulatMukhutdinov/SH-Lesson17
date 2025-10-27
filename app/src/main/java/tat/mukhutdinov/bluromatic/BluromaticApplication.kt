@@ -1,8 +1,8 @@
-package tat.mukhutdinov.lesson19
+package tat.mukhutdinov.bluromatic
 
 import android.app.Application
-import tat.mukhutdinov.lesson19.data.AppContainer
-import tat.mukhutdinov.lesson19.data.DefaultAppContainer
+import tat.mukhutdinov.bluromatic.data.AppContainer
+import tat.mukhutdinov.bluromatic.data.DefaultAppContainer
 
 class BluromaticApplication : Application() {
     /** AppContainer instance used by the rest of classes to obtain dependencies */

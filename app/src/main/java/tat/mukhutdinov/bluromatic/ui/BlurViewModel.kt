@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.ui
+package tat.mukhutdinov.bluromatic.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -7,9 +7,9 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import tat.mukhutdinov.lesson19.BluromaticApplication
-import tat.mukhutdinov.lesson19.data.BlurAmountData
-import tat.mukhutdinov.lesson19.data.BluromaticRepository
+import tat.mukhutdinov.bluromatic.BluromaticApplication
+import tat.mukhutdinov.bluromatic.data.BlurAmountData
+import tat.mukhutdinov.bluromatic.data.BluromaticRepository
 
 /**
  * [BlurViewModel] starts and stops the WorkManger and applies blur to the image. Also updates the

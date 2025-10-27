@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.workers
+package tat.mukhutdinov.bluromatic.workers
 
 import android.content.Context
 import android.util.Log
@@ -7,9 +7,9 @@ import androidx.work.WorkerParameters
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import tat.mukhutdinov.lesson19.DELAY_TIME_MILLIS
-import tat.mukhutdinov.lesson19.OUTPUT_PATH
-import tat.mukhutdinov.lesson19.R
+import tat.mukhutdinov.bluromatic.DELAY_TIME_MILLIS
+import tat.mukhutdinov.bluromatic.OUTPUT_PATH
+import tat.mukhutdinov.bluromatic.R
 import java.io.File
 
 class CleanupWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, params) {

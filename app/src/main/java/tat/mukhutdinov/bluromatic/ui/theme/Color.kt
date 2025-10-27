@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.ui.theme
+package tat.mukhutdinov.bluromatic.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Lesson19"
+rootProject.name = "Bluromatic"
 include(":app")

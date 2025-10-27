@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19
+package tat.mukhutdinov.bluromatic
 
 // Notification Channel constants
 

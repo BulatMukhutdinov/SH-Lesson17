@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.data
+package tat.mukhutdinov.bluromatic.data
 
 import androidx.work.WorkInfo
 import kotlinx.coroutines.flow.Flow

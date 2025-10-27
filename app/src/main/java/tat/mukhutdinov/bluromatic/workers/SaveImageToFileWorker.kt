@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.workers
+package tat.mukhutdinov.bluromatic.workers
 
 import android.content.Context
 import android.graphics.BitmapFactory
@@ -11,9 +11,9 @@ import androidx.work.workDataOf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import tat.mukhutdinov.lesson19.DELAY_TIME_MILLIS
-import tat.mukhutdinov.lesson19.KEY_IMAGE_URI
-import tat.mukhutdinov.lesson19.R
+import tat.mukhutdinov.bluromatic.DELAY_TIME_MILLIS
+import tat.mukhutdinov.bluromatic.KEY_IMAGE_URI
+import tat.mukhutdinov.bluromatic.R
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

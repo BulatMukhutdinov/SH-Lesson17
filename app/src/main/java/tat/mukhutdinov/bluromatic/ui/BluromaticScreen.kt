@@ -1,4 +1,4 @@
-package tat.mukhutdinov.lesson19.ui
+package tat.mukhutdinov.bluromatic.ui
 
 import android.content.Context
 import android.content.Intent
@@ -46,9 +46,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import tat.mukhutdinov.lesson19.R
-import tat.mukhutdinov.lesson19.data.BlurAmount
-import tat.mukhutdinov.lesson19.ui.theme.BluromaticTheme
+import tat.mukhutdinov.bluromatic.R
+import tat.mukhutdinov.bluromatic.data.BlurAmount
+import tat.mukhutdinov.bluromatic.ui.theme.BluromaticTheme
 
 @Composable
 fun BluromaticScreen(blurViewModel: BlurViewModel = viewModel(factory = BlurViewModel.Factory)) {

@@ -1,11 +1,11 @@
-package tat.mukhutdinov.lesson19.data
+package tat.mukhutdinov.bluromatic.data
 
 import android.content.Context
 import android.net.Uri
 import androidx.work.Data
 import androidx.work.WorkInfo
-import tat.mukhutdinov.lesson19.KEY_BLUR_LEVEL
-import tat.mukhutdinov.lesson19.KEY_IMAGE_URI
+import tat.mukhutdinov.bluromatic.KEY_BLUR_LEVEL
+import tat.mukhutdinov.bluromatic.KEY_IMAGE_URI
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 
