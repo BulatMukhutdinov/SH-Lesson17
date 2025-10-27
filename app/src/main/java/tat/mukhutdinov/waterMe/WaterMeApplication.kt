@@ -1,10 +1,10 @@
-package tat.mukhutdinov.bluromatic
+package tat.mukhutdinov.waterMe
 
 import android.app.Application
-import tat.mukhutdinov.bluromatic.data.AppContainer
-import tat.mukhutdinov.bluromatic.data.DefaultAppContainer
+import tat.mukhutdinov.waterMe.data.AppContainer
+import tat.mukhutdinov.waterMe.data.DefaultAppContainer
 
-class BluromaticApplication : Application() {
+class WaterMeApplication : Application() {
     /** AppContainer instance used by the rest of classes to obtain dependencies */
     lateinit var container: AppContainer
     override fun onCreate() {

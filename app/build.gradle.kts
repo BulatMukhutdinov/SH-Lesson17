@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
-    namespace = "tat.mukhutdinov.bluromatic"
+    namespace = "tat.mukhutdinov.waterMe"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "tat.mukhutdinov.bluromatic"
+        applicationId = "tat.mukhutdinov.waterme"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

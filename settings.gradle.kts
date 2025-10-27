@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bluromatic"
+rootProject.name = "Waterme"
 include(":app")
