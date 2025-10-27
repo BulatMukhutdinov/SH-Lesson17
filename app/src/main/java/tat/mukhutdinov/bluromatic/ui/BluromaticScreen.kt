@@ -63,7 +63,8 @@ fun BluromaticScreen(blurViewModel: BlurViewModel = viewModel(factory = BlurView
             .fillMaxSize()
             .statusBarsPadding()
             .padding(
-                start = WindowInsets.safeDrawing.asPaddingValues().calculateStartPadding(layoutDirection), end = WindowInsets.safeDrawing.asPaddingValues().calculateEndPadding(layoutDirection)
+                start = WindowInsets.safeDrawing.asPaddingValues().calculateStartPadding(layoutDirection),
+                end = WindowInsets.safeDrawing.asPaddingValues().calculateEndPadding(layoutDirection)
             )
     ) {
         BluromaticScreenContent(
@@ -80,7 +81,11 @@ fun BluromaticScreen(blurViewModel: BlurViewModel = viewModel(factory = BlurView
 
 @Composable
 fun BluromaticScreenContent(
-    blurUiState: BlurUiState, blurAmountOptions: List<BlurAmount>, applyBlur: (Int) -> Unit, cancelWork: () -> Unit, modifier: Modifier = Modifier
+    blurUiState: BlurUiState,
+    blurAmountOptions: List<BlurAmount>,
+    applyBlur: (Int) -> Unit,
+    cancelWork: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     var selectedValue by rememberSaveable { mutableStateOf(1) }
     val context = LocalContext.current
@@ -94,18 +99,30 @@ fun BluromaticScreenContent(
             contentScale = ContentScale.Fit,
         )
         BlurAmountContent(
-            selectedValue = selectedValue, blurAmounts = blurAmountOptions, modifier = Modifier.fillMaxWidth(), onSelectedValueChange = { selectedValue = it })
+            selectedValue = selectedValue,
+            blurAmounts = blurAmountOptions,
+            modifier = Modifier.fillMaxWidth(),
+            onSelectedValueChange = { selectedValue = it }
+        )
         BlurActions(
-            blurUiState = blurUiState, onStartClick = { applyBlur(selectedValue) }, onSeeFileClick = { imageUri ->
-            showBlurredImage(context, imageUri)
-        }, onCancelClick = { cancelWork() }, modifier = Modifier.fillMaxWidth()
+            blurUiState = blurUiState,
+            onStartClick = { applyBlur(selectedValue) },
+            onSeeFileClick = { imageUri ->
+                showBlurredImage(context, imageUri)
+            },
+            onCancelClick = { cancelWork() },
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
 
 @Composable
 private fun BlurActions(
-    blurUiState: BlurUiState, onStartClick: () -> Unit, onSeeFileClick: (String) -> Unit, onCancelClick: () -> Unit, modifier: Modifier = Modifier
+    blurUiState: BlurUiState,
+    onStartClick: () -> Unit,
+    onSeeFileClick: (String) -> Unit,
+    onCancelClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier, horizontalArrangement = Arrangement.Center
@@ -124,7 +141,7 @@ private fun BlurActions(
                 Button(onClick = onStartClick) { Text(stringResource(R.string.start)) }
 
                 Spacer(modifier = Modifier.width(dimensionResource(R.dimen.padding_small)))
-                // no need to copy
+
                 FilledTonalButton({ onSeeFileClick(blurUiState.outputUri) }) {
                     Text(stringResource(R.string.see_file))
                 }
@@ -135,23 +152,34 @@ private fun BlurActions(
 
 @Composable
 private fun BlurAmountContent(
-    selectedValue: Int, blurAmounts: List<BlurAmount>, modifier: Modifier = Modifier, onSelectedValueChange: (Int) -> Unit
+    selectedValue: Int,
+    blurAmounts: List<BlurAmount>,
+    modifier: Modifier = Modifier,
+    onSelectedValueChange: (Int) -> Unit
 ) {
     Column(
         modifier = modifier.selectableGroup()
     ) {
         Text(
-            text = stringResource(R.string.blur_title), style = MaterialTheme.typography.headlineSmall
+            text = stringResource(R.string.blur_title),
+            style = MaterialTheme.typography.headlineSmall
         )
         blurAmounts.forEach { amount ->
             Row(
                 verticalAlignment = Alignment.CenterVertically, modifier = Modifier
                     .fillMaxWidth()
                     .selectable(
-                        role = Role.RadioButton, selected = (selectedValue == amount.blurAmount), onClick = { onSelectedValueChange(amount.blurAmount) })
-                    .size(48.dp)) {
+                        role = Role.RadioButton,
+                        selected = (selectedValue == amount.blurAmount),
+                        onClick = { onSelectedValueChange(amount.blurAmount) }
+                    )
+                    .size(48.dp)
+            ) {
                 RadioButton(
-                    selected = (selectedValue == amount.blurAmount), onClick = null, modifier = Modifier.size(48.dp), colors = RadioButtonDefaults.colors(
+                    selected = (selectedValue == amount.blurAmount),
+                    onClick = null,
+                    modifier = Modifier.size(48.dp),
+                    colors = RadioButtonDefaults.colors(
                         selectedColor = MaterialTheme.colorScheme.primary
                     )
                 )
@@ -176,7 +204,11 @@ private fun showBlurredImage(context: Context, currentUri: String) {
 fun BluromaticScreenContentPreview() {
     BluromaticTheme {
         BluromaticScreenContent(
-            blurUiState = BlurUiState.Default, blurAmountOptions = listOf(BlurAmount(R.string.blur_lv_1, 1)), {}, {}, modifier = Modifier.padding(16.dp)
+            blurUiState = BlurUiState.Default,
+            blurAmountOptions = listOf(BlurAmount(R.string.blur_lv_1, 1)),
+            applyBlur = {},
+            cancelWork = {},
+            modifier = Modifier.padding(16.dp)
         )
     }
 }
