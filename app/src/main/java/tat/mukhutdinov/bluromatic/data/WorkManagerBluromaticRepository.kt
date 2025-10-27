@@ -78,7 +78,6 @@ class WorkManagerBluromaticRepository(context: Context) : BluromaticRepository {
      * update the amount of blur to be applied and the Uri to operate on
      * @return Data which contains the Image Uri as a String and blur level as an Integer
      */
-    // For reference - already exists in the app
     private fun createInputDataForWorkRequest(blurLevel: Int, imageUri: Uri): Data {
         val builder = Data.Builder()
         builder.putString(KEY_IMAGE_URI, imageUri.toString()).putInt(KEY_BLUR_LEVEL, blurLevel)
