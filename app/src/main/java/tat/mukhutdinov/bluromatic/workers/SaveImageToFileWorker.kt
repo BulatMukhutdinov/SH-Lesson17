@@ -18,6 +18,11 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+/**
+ * Saves the image to a permanent file
+ */
+private const val TAG = "SaveImageToFileWorker"
+
 class SaveImageToFileWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, params) {
 
     private val title = "Blurred Image"
@@ -66,9 +71,5 @@ class SaveImageToFileWorker(ctx: Context, params: WorkerParameters) : CoroutineW
                 Result.failure()
             }
         }
-    }
-
-    companion object {
-        private const val TAG = "SaveImageToFileWorker"
     }
 }

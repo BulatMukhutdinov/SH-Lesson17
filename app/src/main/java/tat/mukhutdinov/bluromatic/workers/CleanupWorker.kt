@@ -12,6 +12,11 @@ import tat.mukhutdinov.bluromatic.OUTPUT_PATH
 import tat.mukhutdinov.bluromatic.R
 import java.io.File
 
+/**
+ * Cleans up temporary files generated during blurring process
+ */
+private const val TAG = "CleanupWorker"
+
 class CleanupWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, params) {
 
     override suspend fun doWork(): Result {
@@ -50,9 +55,5 @@ class CleanupWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ct
                 Result.failure()
             }
         }
-    }
-
-    companion object {
-        private const val TAG = "CleanupWorker"
     }
 }
